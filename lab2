@@ -1,0 +1,9 @@
+
+exercise1:
+	/kern/pmap.c   static void * boot_alloc(uint32_t n):返回分配n个字节内存后的下一个未分配粒度首元素的虚拟地址，仅在初始化过程中被page_init()和men_init调用
+		       void page_init(void):将储存在kernel之后的kern_pgdir[]之后的truct PageInfo数组page[]初始化，标记已被使用的页表，建立page_free_list（栈）（此处为物理地址）
+                       struct PageInfo *page_alloc(int alloc_flags):分配一个物理页表，返回该页表信息struct PageInfo的指针
+                       void page_free(struct PageInfo *pp):将一个页表释放，并放入page_free_list
+
+
+
