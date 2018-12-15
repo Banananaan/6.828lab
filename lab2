@@ -4,6 +4,9 @@ exercise1:
 		       void page_init(void):将储存在kernel之后的kern_pgdir[]之后的truct PageInfo数组page[]初始化，标记已被使用的页表，建立page_free_list（栈）（此处为物理地址）
                        struct PageInfo *page_alloc(int alloc_flags):分配一个物理页表，返回该页表信息struct PageInfo的指针
                        void page_free(struct PageInfo *pp):将一个页表释放，并放入page_free_list
+1：内核代码栈的位置
+2.MMU的实现方式，页表项及目录项内容为物理地址
+3.内核未执行完毕时，虚拟地址向物理地址的映射如何完成
 
 
 
