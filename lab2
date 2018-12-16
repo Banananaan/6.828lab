@@ -5,8 +5,10 @@ exercise1:
                        struct PageInfo *page_alloc(int alloc_flags):分配一个物理页表，返回该页表信息struct PageInfo的指针
                        void page_free(struct PageInfo *pp):将一个页表释放，并放入page_free_list
 1：内核代码栈的位置
+这里指的是操作系统尚未加载完成是，应该由编译器首先指定，在操作系统加载之初，先手动映射一部分虚拟内存（本实验中为4g之后的4mb）此时，系统运行的虚拟内存都在这一块位置
 2.MMU的实现方式，页表项及目录项内容为物理地址
 3.内核未执行完毕时，虚拟地址向物理地址的映射如何完成
+见问题1 
 
 
 
